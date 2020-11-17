@@ -2,6 +2,7 @@ body {
   font-style: 16px;
   line-height: 30px;
   @extend %dmsans-500;
+  $main-color: #7b7b7b;
 }
 
 .container {
