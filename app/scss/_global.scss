@@ -1,6 +1,6 @@
 body {
-  font-style: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 32px;
   @extend %dmsans-500;
   $main-color: #7b7b7b;
 }
@@ -9,4 +9,10 @@ body {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.container-min {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
 }
