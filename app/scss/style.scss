@@ -117,10 +117,6 @@
     margin-bottom: 20px;
   }
 
-  &__sub {
-    margin-bottom: 30px;
-  }
-
   &__title {
     display: block;
     margin-top: 15px;
@@ -155,7 +151,7 @@
   &__tel,
   &__email,
   &__address {
-    @extend %rubik -400;
+    @extend %rubik-400;
     font-size: 14px;
     line-height: 32px;
     color: $main-color;
@@ -164,6 +160,10 @@
   &__address,
   &__sub {
     line-height: 24px;
+  }
+
+  &__sub {
+    margin-bottom: 30px;
   }
 
   &__form {
