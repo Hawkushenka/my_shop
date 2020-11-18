@@ -33,7 +33,7 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 12px;
-    @extend %rubick-500;
+    @extend %rubik-500;
   }
 
   &__list-item+&__list-item {
@@ -216,7 +216,7 @@
 
   &__copy,
   &__link {
-    @extend %rubick-400;
+    @extend %rubik-400;
     font-size: 14px;
     line-height: 32px;
     color: $main-color;
