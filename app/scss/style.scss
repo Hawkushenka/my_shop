@@ -3,6 +3,7 @@
 @import 'reset';
 @import 'button';
 @import 'global';
+@import 'libs';
 
 .header {
   &__inner {
@@ -151,7 +152,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     font-style: normal;
   }
 
