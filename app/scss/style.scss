@@ -67,7 +67,7 @@
     &:hover {
       background-color: $accent-color;
       transform: scale(1.1);
-      box-shadow: 0 0 15px 3px $hover1-color;
+      box-shadow: -1px 2px 16px 4px $classic-black;
     }
   }
 
@@ -82,11 +82,13 @@
   }
 
   &__inner-dots {
+    padding-top: 10px;
     background-color: icon3-color;
   }
 
   &__link {
     position: relative;
+    padding-top: 5px;
     transition: transform .3s;
   }
 
@@ -97,11 +99,12 @@
 
   &__link--increase:hover {
     transform: scale(1.5);
+
   }
 
   &__num {
     position: absolute;
-    top: -9px;
+    top: 0;
     right: -8px;
     border-radius: 50%;
     text-align: center;
@@ -189,10 +192,10 @@
 
   &__form-input {
     padding: 7px 0;
-    border: transparent;
-    background-color: $formbg-color;
     max-width: 180px;
     width: 100%;
+    border: transparent;
+    background-color: $formbg-color;
   }
 
   &__form-btn {
@@ -201,13 +204,13 @@
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     cursor: pointer;
+    outline: transparent;
     @extend %dmsans-400;
     color: $classic-color;
     background-color: $icon3-color;
-    outline: transparent;
 
     &:hover {
-      box-shadow: 3px 2px 16px 4px $hover1-color;
+      box-shadow: -1px 2px 16px 4px $classic-black;
     }
   }
 
@@ -228,9 +231,9 @@
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid $footerline-color;
   padding-top: 6px;
+  border-top: 1px solid $footerline-color;
+  align-items: center;
 
   &__copy,
   &__link {
@@ -262,4 +265,281 @@
 
 }
 
-@import 'media';
+.top-slider {
+  &__inner {
+    background-color: $icon2-color;
+    padding: 95px 0 25px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    margin: 0 125px 100px 75px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    max-width: 420px;
+    width: 100%;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #243f4d;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    max-width: 350px;
+    width: 100%;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $link-color;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+  li {
+    list-style: none;
+
+    button {
+      padding: 18px 15px;
+      margin-right: 15px;
+      border: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      line-height: 0;
+      outline: none;
+      color: $button-color;
+      background-color: $button-bgcolor;
+
+      &:hover {
+        box-shadow: -1px 2px 16px 4px $classic-black;
+        color: $accent-color;
+        background-color: $classic-black;
+      }
+    }
+  }
+}
+
+.top-slider__descr {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $top-slider-color;
+
+  &-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 565px;
+    min-height: 170px;
+    width: 100%;
+  }
+
+  &-items+&-items {
+    border-left: 1px solid $border-color;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    max-width: 220px;
+    width: 100%;
+  }
+
+  &-title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+
+  &-text {
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $text-color;
+  }
+
+  &-text span {
+    display: block;
+  }
+}
+
+.portfolio {
+  padding: 65px 0 90px;
+
+  &__inner {
+    text-align: center;
+  }
+}
+
+.porfolio__gallery {
+  display: grid;
+  grid-template-columns: 270px 270px 270px 270px;
+  grid-gap: 40px;
+
+  &-items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35px;
+    min-height: 380px;
+    height: 100%;
+    box-shadow: -1px 2px 16px 4px $icon3-color;
+
+    p {
+      @extend %dmsans-700;
+      font-size: 16px;
+      line-height: 40px;
+      color: $port-text-color;
+    }
+  }
+
+  &-items:hover {
+    transition: 1s;
+    background-color: $adderss-color;
+    box-shadow: -1px 2px 16px 4px classic-black;
+  }
+
+  &-items:hover p {
+    transition: 1s;
+    color: $classic-color;
+  }
+
+  &-items:hover .porfolio__gallery-num {
+    transition: 1s;
+    color: classic-black;
+  }
+
+  &-img {
+    margin: auto;
+  }
+
+  &-num {
+    margin-top: -10px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 40px;
+    color: $icon3-color;
+  }
+
+  &-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-items:hover &-link {
+    display: block;
+  }
+
+  &-link {
+    display: none;
+    padding: 5px 10px 0 10px;
+    margin-left: 20px;
+    border-radius: 50%;
+    background-color: $classic-color;
+
+    &:hover {
+      transform: scale(1.5);
+      fill: classic-color;
+      transition: 1s;
+      box-shadow: -1px 2px 16px 4px $classic-black;
+      background-color: $classic-black;
+    }
+  }
+}
+
+.lamps {
+  padding: 190px 0 100px 0;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 870px 870px;
+    grid-gap: 30px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px 0 80px 50px;
+    max-height: 390px;
+    height: 100%;
+    background-color: $lampsbgi-color;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 350px;
+    margin-left: 50px;
+    height: 100%;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #243f4d;
+  }
+
+  &__subtitle {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $port-text-color;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle,
+  &__link {
+    margin-bottom: 20px;
+  }
+
+  &__info-link {
+    border: 1px solid $info-link-color;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: $infolbg-color;
+    background-color: transparent;
+    
+    &:hover {
+      color: $title__footer-color;
+      background-color: $adderss-color;
+    }
+
+    &::after {
+      content: url('../images/arrow2.svg');
+      padding-left: 55px;
+      width: 22px;
+      height: 9px;
+      color: $classic-black;
+    }
+  }
+}

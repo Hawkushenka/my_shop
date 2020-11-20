@@ -11,7 +11,7 @@ body {
   font-size: 14px;
   line-height: 32px;
   @extend %dmsans-500;
-  $main-color: #7b7b7b;
+  color: $main-color;
   display: flex;
   flex-direction: column;
 }
@@ -23,7 +23,64 @@ body {
 }
 
 .container-min {
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
+
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: $global-title-color;
+}
+
+.title-nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+    margin-bottom: 80px;
+  }
+
+  &__items+&__items {
+    margin-left: 25px;
+  }
+
+  &__link {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $inkb-color;
+
+    &:hover {
+      color: $hov-color;
+    }
+  }
+}
+
+.info-link {
+  padding: 20px;
+  background-color: linkkbg-color;
+  color: $classic-color;
+  outline: transparent;
+  cursor: pointer;
+  border-radius: 50px;
+ 
+  &:hover {
+    box-shadow: -1px 2px 16px 4px $classic-black;
+    color: $accent-color;
+    background-color: $classic-black;
+  }
+
+  &::after {
+    content: url('../images/arrow.png');
+    width: 22px;
+    height: 9px;
+    padding-left: 55px;
+    color: $classic-black;
+  }
+}
+
+
+ 
