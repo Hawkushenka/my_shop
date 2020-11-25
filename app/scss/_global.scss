@@ -61,12 +61,11 @@ body {
 
 .info-link {
   padding: 20px;
-  background-color: linkkbg-color;
+  background-color: $linkkbg-color;
   color: $classic-color;
   outline: transparent;
   cursor: pointer;
-  border-radius: 50px;
- 
+
   &:hover {
     box-shadow: -1px 2px 16px 4px $classic-black;
     color: $accent-color;
@@ -81,6 +80,76 @@ body {
     color: $classic-black;
   }
 }
+.search {
+  display: flex;
+  background-color: #ecf1f3;
+  height: 53px;
+  border-radius: 50px;
+  align-items: center;
 
 
- 
+
+  &__txt {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: .4s;
+    line-height: 2;
+    width: 0;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ecf1f3;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #ecf1f3;
+    text-decoration: none;
+  }
+
+  &:hover .search__txt {
+    width: 240px;
+    padding: 0 15px;
+  }
+
+  &:hover .search__btn {
+    background-color: #ecf1f3;
+  }
+
+
+  &__link {
+    color: $link-color;
+
+    &:hover {
+      @extend %dmsans-700;
+      color: $accent-color;
+    }
+  }
+}
+
+.buy-btn {
+  position: relative;
+  padding-top: 5px;
+  transition: transform .3s;
+
+  &__num {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    border-radius: 50%;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 16px;
+    color: #243f4d;
+    background-color: $classic-color;
+  }
+}

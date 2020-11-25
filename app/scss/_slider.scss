@@ -1,0 +1,66 @@
+.slider {
+  &__inner {
+    background-color: $icon2-color;
+    padding: 95px 0 25px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    margin: 0 125px 100px 75px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    max-width: 420px;
+    width: 100%;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #243f4d;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    max-width: 350px;
+    width: 100%;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $link-color;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+  li {
+    list-style: none;
+
+    button {
+      padding: 18px 15px;
+      margin-right: 15px;
+      border: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      line-height: 0;
+      outline: none;
+      color: $button-color;
+      background-color: $button-bgcolor;
+
+      &:hover {
+        box-shadow: -1px 2px 16px 4px $classic-black;
+        color: $accent-color;
+        background-color: $classic-black;
+      }
+    }
+  }
+}

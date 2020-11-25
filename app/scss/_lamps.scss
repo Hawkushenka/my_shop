@@ -1,0 +1,73 @@
+.lamps {
+  padding: 190px 0 100px 0;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 870px 870px;
+    grid-gap: 30px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px 0 80px 50px;
+    max-height: 390px;
+    height: 100%;
+    background-color: $lampsbgi-color;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 350px;
+    margin-left: 50px;
+    height: 100%;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #243f4d;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $port-text-color;
+  }
+
+
+
+  &__subtitle,
+  &__link {
+    margin-bottom: 20px;
+  }
+
+  &__info-link {
+    border: 1px solid $info-link-color;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: $infolbg-color;
+    background-color: transparent;
+
+    &:hover {
+      color: $title__footer-color;
+      background-color: $adderss-color;
+    }
+
+    &::after {
+      content: url('../images/arrow2.svg');
+      padding-left: 55px;
+      width: 22px;
+      height: 9px;
+      color: $classic-black;
+    }
+  }
+}

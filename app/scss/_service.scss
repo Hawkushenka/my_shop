@@ -1,0 +1,44 @@
+.service {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $top-slider-color;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 565px;
+    min-height: 170px;
+    width: 100%;
+
+    &+& {
+      border-left: 1px solid $border-color;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    max-width: 220px;
+    width: 100%;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+
+  &__text {
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $text-color;
+
+    & span {
+      display: block;
+    }
+  }
+}
